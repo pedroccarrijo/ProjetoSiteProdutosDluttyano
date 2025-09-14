@@ -1,0 +1,396 @@
+/* seleção total da pagina */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html geral */
+html{
+    background-color: whitesmoke;
+    scroll-behavior: smooth; /*rolagem mais suave*/
+    
+}
+
+/* barra de navegação -navbar */
+.navbar {
+    display: flex;                     /* organiza horizontalmente */
+    justify-content: space-between;    /* logo à esquerda, menu à direita */
+    align-items: center;               /* centraliza verticalmente */
+                 
+    padding: 0px 30px;
+
+    position: fixed;   /* fixa no topo */
+    top: 0;            /* distancia do topo */
+    left: 0;           /* começa na esquerda */
+    width: 100%;       /* ocupa toda a largura */
+    background-color: white; /* fundo para o menu não ficar transparente */
+    z-index: 1000;     /* fica acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra para destaque */
+
+    
+}
+
+.navbar img {
+    width: 80px;
+    height: auto;
+}
+.navbar .nome-marca{
+    font-family: 'Lora', serif;
+    font-size: 30px;
+}
+
+/* opções do navbar */
+.options {
+    
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    padding: 0.2%;  /* comanda o tamanho em volta as opções */
+    border-radius: 22px; /* comanda a curva na lateral das bordas */
+    
+}
+
+.options > a {
+    font-family: 'Lora', serif;
+    color: black;
+    text-decoration: none;
+    padding: 7px 50px; /*comanda o tamanho da volta quando o cursor fica em cima (altura e comprimento)*/ 
+    border-radius: 22px;
+    transition: all 0.5s; /*controla a transição de cores do padding (cquando cursor passa e sai)*/
+}
+.options > a:hover {
+    background-color: rgb(5, 41, 95);
+    color: white;
+}
+
+/* carrossel de imagens - pagina inicial */
+.carrossel {
+    width: 100%;           /* ocupa toda a largura da tela */
+    height: 90vh;          /* altura do banner em relação a altura da viewport */
+    position: relative;
+    overflow: hidden;      /* esconde qualquer parte que ultrapassar */
+    margin: 0;             /* remove margens automáticas */
+    margin-top: 90px; /* altura aproximada do menu */
+
+}
+
+.carrossel .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* preenche a área, cortando partes se necessário */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 2s ease;
+    
+}
+
+.carrossel .img:first-child {
+    opacity: 1;
+}
+
+/* bullets - botões de mudança do carrossel  */
+.bullets {
+    position: absolute;      /* posiciona em relação ao carrossel */
+    bottom: 20px;            /* distância da parte inferior do carrossel */
+    left: 50%;               /* centraliza horizontalmente */
+    transform: translateX(-50%); /* corrige o centro */
+    text-align: center;
+    z-index: 10;             /* acima das imagens */
+}
+
+.bullet-single {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.active-bullet {
+    background-color: black;
+}
+
+/* mini img de separação */
+
+.img-separacao{
+    background-color: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+.img-separacao img{
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: auto;
+}   
+
+
+/* banner-produtos */
+.titulo-conheca{
+    padding: 15px 32px;
+    font-family: 'Lora', serif;
+    font-size: 23px;
+    
+}
+.banner-produtos {
+    display: flex;
+    width: 100%; /*porcentagem que as img ocupam a tela (geral)*/
+    padding: 0 30px; /*0 - em cima e embaixo; 30 - nas duas laterais*/
+    gap: 5px;   /* define o espaçamento entre as imagens */
+}
+
+.banner-produtos div {
+    flex: 1; 
+    overflow: hidden;  /* impede o delay do corte */
+}
+
+.banner-produtos img {
+    width: 100%; /*porcentagem que cada imagem vai usar na sua posição*/ 
+    height: auto;
+    object-fit: cover; /*se precisar ajustar a imagem (cortar)*/
+    transition: transform 0.5s ease;
+    display: block;
+    
+}
+
+.banner-produtos img:hover {
+    transform: scale(1.1); /*scale ampliação 110%*/
+    cursor: pointer;
+}
+
+/*   modal (janela) fica escondido inicialmente */
+.modal {
+    display: none; /* começa invisível */
+    position: fixed; /* fica preso na tela mesmo com rolagem */
+    top: 0; 
+    left: 0; /* ocupa toda a tela */
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* fundo escuro transparente */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    z-index: 20;
+}
+
+/* Conteúdo dentro do modal */
+.modal-content {
+    background: white; /* fundo branco */
+    border-radius: 12px; /* cantos arredondados */
+    max-width: 600px;
+    width: 90%;
+    height: 65%;
+    padding: 10px 20px;
+    border-style: solid;
+    border-color: black;
+
+}
+
+.modal-content h2{
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lora', serif;
+}
+
+/* Container que segura os cards */
+.cards{
+    display: flex; /* coloca os cards lado a lado */
+    gap: 55px; /* espaço entre os cards */
+    padding: 50px;
+    
+}
+
+/* Cada card dentro do modal */
+.cards img{
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border-style: solid;
+}
+
+.cards p{
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-weight: 800;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+/* Botão para fechar o modal */
+.close {
+    float: right; /* joga o botão para a direita */
+    font-size: 30px; /* tamanho maior */
+    cursor: pointer; /* cursor de clique */
+    font-weight: 800;
+  
+}
+
+
+
+
+/* Produtos */
+
+
+.titulo-produtos{
+    font-family: 'Lora', serif;
+}
+
+.produtos-botas-pretas, .produtos-botas-cafe{
+    display: flex;
+    margin-left: 40px;
+    text-align: center;
+}
+
+
+.lateral-info-preta, .lateral-info-cafe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px 10px;
+    gap: 90px;
+    border-radius: 20px;
+    margin: 50px 5px;
+    
+}
+.circulo{
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+    
+}
+.texto-vertical{
+    font-family: 'Lora', serif;
+    font-size: 20px; 
+    writing-mode: vertical-rl; /* texto de cima para baixo */
+    text-orientation: upright; /* mantém as letras retas */
+    
+}
+
+.img-produtos-botas-pretas, .img-produtos-botas-cafe{
+    display: flex;
+    padding: 10px 10px;
+    background-color: white;
+    margin: 50px 30px;
+    border-radius: 20px;
+
+}
+
+.img-produtos-botas-pretas img, .img-produtos-botas-cafe img{
+    width: 90%;
+    height: auto;
+
+}
+
+.img-produtos-botas-pretas div, .img-produtos-botas-cafe div {
+    transition: transform 0.4s ease;
+    text-align: center; /* centraliza o texto */
+}
+
+.img-produtos-botas-pretas div:hover, .img-produtos-botas-cafe div:hover{
+    transform: scale(1.05); /*scale ampliação 105%*/
+    cursor: pointer;
+   
+}
+
+.img-produtos-botas-pretas a, .img-produtos-botas-cafe a{
+    font-family:'Lora', serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+.img-produtos-botas-pretas a{
+    color: #000000;
+}
+.img-produtos-botas-cafe a{
+    color: rgb(77, 4, 4);
+}
+
+
+
+
+
+
+
+/*conteudo texto*/
+.sobre {
+    display: flex; /* cria as duas colunas */
+    gap: 60px; /* espaço entre mural e texto */
+    padding: 50px 10%;
+}
+.conteudo{
+    text-align: center;
+    flex: 1.5; /* ocupa metade da largura */
+
+}
+.titulo-sobre h2 {
+    font-size: 50px;
+    padding: 50px;
+    font-family: 'Lora', serif;
+
+}
+.texto-sobre{
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #000000;
+
+}
+
+/* mural de fotos */
+.mural {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: masonry; /* fotos podem ter tamanhos diferentes */
+    gap: 10px;
+    flex: 1; /* ocupa metade da largura */
+    padding: 80px;
+}
+
+.mural img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.mural img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Classe que bloqueia a rolagem da página */
+.no-scroll {
+    overflow: hidden; /* remove a barra de rolagem */
+    height: 100vh;   /* garante que a altura da página não aumente */
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    .carrossel {
+        height: 50vh;
+        margin-top: 80px;
+    }
+
+    .options > a {
+        padding: 5px 20px;
+    }
+
+    .navbar .nome-marca {
+        font-size: 24px;
+    }
+}

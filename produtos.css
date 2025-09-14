@@ -1,0 +1,112 @@
+.produtos-detalhes{
+    background-color: whitesmoke;
+    display: flex;
+    gap: 10px;
+    padding: 10px 50px;
+    border-radius: 10px;
+
+}
+
+.galeria{
+    flex: 2;
+}
+
+#img-principal-galeria{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(189, 189, 189, 0.1);
+    border-radius: 10px;
+}
+
+#img-miniaturas-galeria{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#img-miniaturas-galeria img{
+    width: 100px;
+    height: auto;
+    box-shadow: 0 0 20px rgba(189, 189, 189, 0.1);
+    border-radius: 10px;
+    
+    
+}
+#img-miniaturas-galeria img:hover{
+    transform: scale(1.05);
+    cursor: pointer; 
+}
+
+.info-produto{
+    text-align: center;
+    flex: 3;
+    box-shadow: 0 0 20px rgba(189, 189, 189, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    
+}
+
+#nome-produto{
+    font-family:'Lora', serif;
+    font-size: 30px;
+    margin-top: 25px;
+    white-space: pre-line; /*para funcionar a quebra de linha no js, \n*/
+}
+
+.linha-separacao{
+    display: inline-block;
+    width: 80px;
+    height: 2px;
+    background-color: black;
+}
+
+.variacao h3{
+    font-family:'Lora', serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.botoes-troca-cores{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circulo-selecao{
+    display: inline-block;
+    border-radius:50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.variacao p{
+    font-family:'Lora', serif;
+    font-size: 15px;
+    
+}
+
+.tamanhos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    
+
+    
+}
+.tamanhos div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+      
+    
+    
+}
+

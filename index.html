@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> <!--link com o arquivo css-->
+    <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon"> <!--logo http-->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- importação de fontes-->
+    <title>D'Luttyano</title> <!-- titulo http -->
+</head>
+
+<header class="navbar"> <!--barra de navegação-->
+    <img src="imagens/LogoMarca.png" alt="Logo Marca">
+    <a class="nome-marca">D'Luttyano</a>
+    <nav class="options">
+        <a href="#home" >Home</a>
+        <a href="#titulo-conheca">Conheça</a>
+        <a href="#anuncio-produtos">Produtos</a>
+
+        
+        <a href="#sobre">Sobre</a>
+        
+    </nav>
+</header>
+
+<body>
+    <div id="home" style="scroll-margin-top: 100px;"></div> <!-- ancora para botão home -->
+
+    <div class="carrossel" id="carrossel"> <!--imgs do carrossel-->
+        <img style="opacity:1;" src="imagens/carrossel/Couro.png" class="img img1"/> 
+        <img src="imagens/carrossel/PU.png"class="img img2"/> 
+
+        <div class="bullets"> <!--bullets para mudança de img-->
+            <div class="bullet-single active-bullet"></div>
+            <div class="bullet-single"></div>
+        </div>
+
+    </div>
+
+    <div class="img-separacao"> <!-- mini imagem de separação -->
+        <img src="imagens/img-separacao.png"/>
+    </div>
+
+    <div class="titulo-conheca" id="titulo-conheca" style="scroll-margin-top: 80px;"><h2>Conheça:</h2></div> <!-- titulo e ancora conheça-->
+
+    <section class="banner-produtos"> <!-- banner dos modelos-->
+        <!-- 5100 -->
+        <div><img src="imagens/banner/5100-banner.jpg" alt="5100" button class="btn-modelos" onclick="abrirModal('modal5100')"></button></div>
+        <!-- 5500 -->
+        <div><img src="imagens/banner/5500-banner.jpeg" alt="5500" button class="btn-modelos" onclick="abrirModal('modal5500')"></button></div>      
+        <!-- 5600 -->
+        <div><img src="imagens/banner/5600-banner.jpeg" alt="5600" button class="btn-modelos" onclick="abrirModal('modal5600')"></button></div>
+        <!-- 6000 -->
+        <div><img src="imagens/banner/6000-banner.jpeg" alt="6000" button class="btn-modelos" onclick="abrirModal('modal6000')"></button></div>
+    </section>
+
+
+    <div id="modal5100" class="modal">
+        <div class="modal-content">
+            <!-- Botão X para fechar o modal -->
+            <span class="close" onclick="fecharModal('modal5100')">&times;</span>
+
+            <!-- Título do modal -->
+            <h2>5100</h2>
+
+            <!-- Área com os cards dos modelos -->
+            <div class="cards">
+                <div><img src="imagens/5100/Preta/5100-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
+                <div><img src="imagens/5100/Café/5100-cafe-img1-1p.jpg" alt=""><p>Café</p></div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal referente ao banner 5500 -->
+    <div id="modal5500" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal5500')">&times;</span>
+            <h2>5500</h2>
+
+            <div class="cards">
+                <div><img src="imagens/5500/Preta/5500-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
+                <div ><img src="imagens/5500/Café/5500-cafe-img1-1p.jpg"><p>Café</p></div>
+            </div>
+        </div>
+    </div>
+
+       <!-- Modal referente ao banner 5600 -->
+    <div id="modal5600" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal5600')">&times;</span>
+            <h2>5600</h2>
+
+            <div class="cards">
+                <div><img src="imagens/5600/Preta/5600-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
+                <div><img src="imagens/5600/Café/5600-cafe-img1-1p.jpg" alt=""><p>Café</p></div>
+            </div>
+        </div>
+    </div>
+
+       <!-- Modal referente ao banner 6000 -->
+    <div id="modal6000" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal6000')">&times;</span>
+            <h2>6000</h2>
+
+            <div class="cards">
+                <div><img src="imagens/6000/Preta/6000-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
+                <div><img src="imagens/6000/Café/6000-cafe-img1-1p.jpg" alt=""><p>Café</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="img-separacao"> <!-- mini imagem de separação -->
+        <img src="imagens/img-separacao.png"/>
+    </div>
+
+    
+    <section class="anuncio-produtos" id="anuncio-produtos">
+        <div class="titulo-produtos">
+            <h2>Produtos:</h2>
+        </div>
+
+
+        <div class="produtos-botas-pretas">
+
+            <div class="lateral-info-preta">
+                <div class="circulo" style="background-color: rgb(34, 33, 33);"></div>
+                <div class="texto-vertical">Preta</div>
+            </div>
+
+            <div class="img-produtos-botas-pretas">
+                <!-- 5100 -->
+                <div><a href="produtos.html?id=5100&cor=preta"> <img src="imagens/5100/Preta/5100-preta-img1-1p.jpg" alt=""> <br> Ref 5100 <br> Laterais em Elástico</a></div>
+                <!-- 5500 -->
+                <div><a href="produtos.html?id=5500&cor=preta"> <img src="imagens/5500/Preta/5500-preta-img1-1p.jpg" alt=""> <br> Ref 5500 <br> Fechamento em Um Zíper <br> (Interno)</a></div>
+                <!-- 5600 -->
+                <div><a href="produtos.html?id=5600&cor=preta"> <img src="imagens/5600/Preta/5600-preta-img1-1p.jpg" alt=""> <br> Ref 5600 <br> Fechamento em dois Zíperes <br> (Interno e Externo)</a></div>
+                <!-- 6000 -->
+                <div><a href="produtos.html?id=6000&cor=preta"> <img src="imagens/6000/Preta/6000-preta-img1-1p.jpg" alt="">   <br> Ref 6000 <br> Bota Cano Médio <br> Com Fechamento em Um Zíper <br>(Interno)</a></div>
+            </div>
+
+        </div>
+
+
+        <div class="produtos-botas-cafe">
+
+            <div class="lateral-info-cafe">
+                <div class="circulo" style="background-color: rgb(77, 4, 4);"></div>
+                <div class="texto-vertical"  style=" color:rgb(77, 4, 4);">Café</div>
+            </div>
+
+            <div class="img-produtos-botas-cafe">
+                <!-- 5100 -->
+                <div><a href="produtos.html?id=5100&cor=cafe"> <img src="imagens/5100/Café/5100-cafe-img1-1p.jpg" alt=""> <br> Ref 5100 <br> Laterais em Elástico</a></div>
+                <!-- 5500 -->
+                <div ><a href="produtos.html?id=5500&cor=cafe"> <img src="imagens/5500/Café/5500-cafe-img1-1p.jpg" alt=""> <br> Ref 5500 <br> Fechamento em Um Zíper <br> (Interno)</a></div>
+                <!-- 5600 -->
+                <div><a href="produtos.html?id=5600&cor=cafe"> <img src="imagens/5600/Café/5600-cafe-img1-1p.jpg" alt=""> <br> Ref 5600 <br> Fechamento em dois Zíperes <br> (Interno e Externo)</a></div>
+                <!-- 6000 -->
+                <div><a href="produtos.html?id=60   00&cor=cafe"> <img src="imagens/6000/Café/6000-cafe-img1-1p.jpg" alt=""> <br> Ref 6000 <br> Bota Cano Médio <br> Com Fechamento em Um Zíper <br>(Interno)</a></div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="img-separacao"> <!-- mini imagem de separação -->
+        <img src="imagens/img-separacao.png"/>
+    </div>
+
+
+    <section class="sobre" id="sobre"> <!--texto sobre a marca-->
+
+
+        <div class="conteudo">
+            <div class="titulo-sobre">
+                <h2>Sobre a D'Luttyano</h2>
+            </div>
+
+            <div class="texto-sobre">
+                <p>
+                    Desde 2000, na cidade de Franca, a <strong>D’Luttyano</strong> vem transformando couro legítimo 
+                    em calçados que unem <strong>tradição artesanal, elegância e conforto</strong>. Cada par é cuidadosamente 
+                    confeccionado à mão, utilizando <strong>materiais selecionados a dedo</strong> e submetido a um 
+                    <strong>rigoroso controle de qualidade</strong>, garantindo que cada passo do cliente seja seguro, confortável e sofisticado.
+                </p>
+
+                <p>
+                    Nossa missão é criar calçados que acompanhem nossos clientes em momentos importantes da vida, seja em eventos especiais ou no dia a dia social, transmitindo 
+                    <strong>confiança, personalidade e estilo</strong> 
+                    a cada passo. Mais do que produtos, oferecemos uma experiência que combina 
+                    <strong>durabilidade, conforto e sofisticação</strong>, 
+                    valorizando a arte da fabricação artesanal e mantendo viva a 
+                    tradição de excelência do calçado feito à mão.
+                </p>
+
+                <p>
+                    Para todos que prezam por 
+                    <strong>qualidade, elegância e exclusividade</strong>, 
+                    os calçados D’Luttyano são a escolha ideal para expressar bom gosto, sofisticação e cuidado em cada ocasião.
+                </p>
+
+                <p><em>D’Luttyano: feita para caminhar com você, sempre com elegância.</em></p>
+            </div>
+        </div>
+
+          <div class="mural">
+            <img src="imagens/sobre1.jpg" alt="Foto 1">
+            <img src="imagens/sobre2.jpg" alt="Foto 2">
+            <img src="imagens/sobre3.jpg" alt="Foto 3">
+            <img src="imagens/sobre4.jpg" alt="Foto 4">
+        </div>
+    </section>
+    
+
+<script src="script.js"></script> <!-- linka com o arquivo script.js-->
+</body>
+</html>
+
+
+<!-- <p>       : Define um parágrafo de texto.
+    <a>       : Define um link para outra página ou seção.
+    <img>     : Insere uma imagem na página.
+    src       : Atributo da <img> que define o caminho da imagem.
+    alt       : Atributo da <img> que descreve a imagem para acessibilidade e SEO.
+    <div>     : Container genérico usado para agrupar elementos e aplicar estilos.
+    <section> : Define uma seção temática do site, como "História da Marca".
+    class     : Atribui uma classe ao elemento, usada para estilização via CSS.
+    <header>  : Define o cabeçalho da página, geralmente com logo e menu.
+    <link>   : Importa arquivos externos, como CSS ou fontes.
+    <meta>   : Define informações sobre a página, como charset e viewport.
+    <title>  : Define o título da página que aparece na aba do navegador.
+    <strong> : Dá ênfase forte a um trecho de texto, geralmente exibido em negrito, indicando importância semântica 
+    <nav>     : Define um bloco de navegação, normalmente com links para diferentes partes do site.-->
