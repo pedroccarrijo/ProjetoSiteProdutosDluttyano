@@ -44,42 +44,12 @@ window.onload = function () {
     window.scrollTo(0, 0);
 }; // reseta a posição da página 
 
+  const body = document.body;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
 
-
-
-// Função para abrir o modal
-function abrirModal(id) {
-    // Pega o modal pelo id e muda o display para "flex" (visível)
-    document.getElementById(id).style.display = 'flex';
-    document.body.classList.add('no-scroll'); // bloqueia o scroll
-
-    // desativa âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.dataset.disabled = "true"; // marca como desativada
-    });
-    // a - seleciona todos os elementos <a> (links/âncoras)
-    // href → o atributo que estamos olhando
-    // ^= → começa com
-    // "#" → o valor que deve começar
-}
-
-// Função para fechar o modal   
-function fecharModal(id) {
-    // Pega o modal pelo id e muda o display para "none" (escondido)
-    document.getElementById(id).style.display = 'none';
-    document.body.classList.remove('no-scroll'); // libera o scroll
-
-    // reativa âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.dataset.disabled = "false";
-    });
-}   
-
-// intercepta os cliques
-document.querySelectorAll('a[href^="#"]').forEach(link => { //puxa as informações do html
-    link.addEventListener('click', function(event) {
-        if (link.dataset.disabled === "true") { //verifica se o click é verdadeiro
-        event.preventDefault(); //preventDefault bloqueia o evento
-        }
-    });
-});
+  window.addEventListener('scroll', () => {
+    let scroll = window.scrollY;
+    let percent = scroll / maxScroll; // 0 no topo, 1 no final
+    let colorValue = Math.floor(255 - (percent * 255)); // 255 → 0
+    body.style.background = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+  });

@@ -14,19 +14,15 @@
     <a class="nome-marca">D'Luttyano</a>
     <nav class="options">
         <a href="#home" >Home</a>
-        <a href="#titulo-conheca">Conheça</a>
-        <a href="#anuncio-produtos">Produtos</a>
-
-        
+        <a href="#titulo-produtos">Produtos</a>
         <a href="#sobre">Sobre</a>
-        
     </nav>
 </header>
 
 <body>
     <div id="home" style="scroll-margin-top: 100px;"></div> <!-- ancora para botão home -->
 
-    <div class="carrossel" id="carrossel"> <!--imgs do carrossel-->
+    <section class="carrossel" id="carrossel"> <!--imgs do carrossel-->
         <img style="opacity:1;" src="imagens/carrossel/Couro.png" class="img img1"/> 
         <img src="imagens/carrossel/PU.png"class="img img2"/> 
 
@@ -34,91 +30,11 @@
             <div class="bullet-single active-bullet"></div>
             <div class="bullet-single"></div>
         </div>
-
-    </div>
-
-    <div class="img-separacao"> <!-- mini imagem de separação -->
-        <img src="imagens/img-separacao.png"/>
-    </div>
-
-    <div class="titulo-conheca" id="titulo-conheca" style="scroll-margin-top: 80px;"><h2>Conheça:</h2></div> <!-- titulo e ancora conheça-->
-
-    <section class="banner-produtos"> <!-- banner dos modelos-->
-        <!-- 5100 -->
-        <div><img src="imagens/banner/5100-banner.jpg" alt="5100" button class="btn-modelos" onclick="abrirModal('modal5100')"></button></div>
-        <!-- 5500 -->
-        <div><img src="imagens/banner/5500-banner.jpeg" alt="5500" button class="btn-modelos" onclick="abrirModal('modal5500')"></button></div>      
-        <!-- 5600 -->
-        <div><img src="imagens/banner/5600-banner.jpeg" alt="5600" button class="btn-modelos" onclick="abrirModal('modal5600')"></button></div>
-        <!-- 6000 -->
-        <div><img src="imagens/banner/6000-banner.jpeg" alt="6000" button class="btn-modelos" onclick="abrirModal('modal6000')"></button></div>
     </section>
-
-
-    <div id="modal5100" class="modal">
-        <div class="modal-content">
-            <!-- Botão X para fechar o modal -->
-            <span class="close" onclick="fecharModal('modal5100')">&times;</span>
-
-            <!-- Título do modal -->
-            <h2>5100</h2>
-
-            <!-- Área com os cards dos modelos -->
-            <div class="cards">
-                <div><img src="imagens/5100/Preta/5100-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
-                <div><img src="imagens/5100/Café/5100-cafe-img1-1p.jpg" alt=""><p>Café</p></div>
-            </div>
-        </div>
-    </div>
-
-
-        <!-- Modal referente ao banner 5500 -->
-    <div id="modal5500" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal('modal5500')">&times;</span>
-            <h2>5500</h2>
-
-            <div class="cards">
-                <div><img src="imagens/5500/Preta/5500-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
-                <div ><img src="imagens/5500/Café/5500-cafe-img1-1p.jpg"><p>Café</p></div>
-            </div>
-        </div>
-    </div>
-
-       <!-- Modal referente ao banner 5600 -->
-    <div id="modal5600" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal('modal5600')">&times;</span>
-            <h2>5600</h2>
-
-            <div class="cards">
-                <div><img src="imagens/5600/Preta/5600-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
-                <div><img src="imagens/5600/Café/5600-cafe-img1-1p.jpg" alt=""><p>Café</p></div>
-            </div>
-        </div>
-    </div>
-
-       <!-- Modal referente ao banner 6000 -->
-    <div id="modal6000" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal('modal6000')">&times;</span>
-            <h2>6000</h2>
-
-            <div class="cards">
-                <div><img src="imagens/6000/Preta/6000-preta-img1-1p.jpg" alt=""><p>Preta</p></div>
-                <div><img src="imagens/6000/Café/6000-cafe-img1-1p.jpg" alt=""><p>Café</p></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="img-separacao"> <!-- mini imagem de separação -->
-        <img src="imagens/img-separacao.png"/>
-    </div>
-
     
     <section class="anuncio-produtos" id="anuncio-produtos">
-        <div class="titulo-produtos">
-            <h2>Produtos:</h2>
+        <div class="titulo-produtos" id="titulo-produtos" style="scroll-margin-top: 100px;">
+            <p>Produtos:</p>
         </div>
 
 
@@ -158,15 +74,11 @@
                 <!-- 5600 -->
                 <div><a href="produtos.html?id=5600&cor=cafe"> <img src="imagens/5600/Café/5600-cafe-img1-1p.jpg" alt=""> <br> Ref 5600 <br> Fechamento em dois Zíperes <br> (Interno e Externo)</a></div>
                 <!-- 6000 -->
-                <div><a href="produtos.html?id=60   00&cor=cafe"> <img src="imagens/6000/Café/6000-cafe-img1-1p.jpg" alt=""> <br> Ref 6000 <br> Bota Cano Médio <br> Com Fechamento em Um Zíper <br>(Interno)</a></div>
+                <div><a href="produtos.html?id=6000&cor=cafe"> <img src="imagens/6000/Café/6000-cafe-img1-1p.jpg" alt=""> <br> Ref 6000 <br> Bota Cano Médio <br> Com Fechamento em Um Zíper <br>(Interno)</a></div>
             </div>
         </div>
 
     </section>
-
-    <div class="img-separacao"> <!-- mini imagem de separação -->
-        <img src="imagens/img-separacao.png"/>
-    </div>
 
 
     <section class="sobre" id="sobre"> <!--texto sobre a marca-->

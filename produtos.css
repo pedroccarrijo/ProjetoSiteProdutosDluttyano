@@ -1,8 +1,10 @@
-.produtos-detalhes{
+body{
     background-color: whitesmoke;
+}
+.produtos-detalhes{
     display: flex;
     gap: 10px;
-    padding: 10px 50px;
+    padding: 10px 30px;
     border-radius: 10px;
 }
 
@@ -43,6 +45,7 @@
     box-shadow: 0 0 20px rgba(189, 189, 189, 0.1);
     border-radius: 10px;
     background-color: white;
+    
 }
 
 #nome-produto{
